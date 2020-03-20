@@ -3,12 +3,12 @@ version: '3.4'
 services:
   db:
     image: mariadb:10.3.13
-    container_name: store-db
+    container_name: mariadb
     ports:
       - "3307:3306"
     environment:
       - MYSQL_ROOT_HOST=%
-      - MYSQL_ROOT_PASSWORD=your-root-password
+      - MYSQL_ROOT_PASSWORD=gomismile2019
     volumes:
       - gomi_db_volume:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4
